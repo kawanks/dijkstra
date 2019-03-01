@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<graph>
+    <vertex name="v1">
+        <px>100</px>
+        <py>100</py>
+    </vertex>
+
+    <vertex name="v2">
+        <px>150</px>
+        <py>150</py>
+    </vertex>
+
+    <edge>
+        <from>v1</from>
+        <to>v2</to>
+    </edge>
+</graph>
