@@ -21,4 +21,5 @@
 
 - [game dev. para algoritmos](https://www.researchgate.net/profile/Herleson_Pontes2/publication/259485824_Game_Development_in_Learning_Process_of_Algorithms_and_Computer_Programming/links/00b4952c2db4656d47000000/Game-Development-in-Learning-Process-of-Algorithms-and-Computer-Programming.pdf)
 
-(game para ensino de geometria)[http://www.sbgames.org/sbgames2016/downloads/anais/157208.pdf]
+- [game para ensino de geometria](http://www.sbgames.org/sbgames2016/downloads/anais/157208.pdf)
+
