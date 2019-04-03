@@ -5,7 +5,16 @@ public class Graph implements Cloneable{
 	//Override the clone() method to allow clone the graph instance.
 	@Override
 	public Graph clone() throws CloneNotSupportedException {
-		return (Graph) super.clone();
+		Graph ref = new Graph(graph.length);
+		
+		for (int i=0; i< graph.length; i++) {
+			for(int j=0; j<graph.length; j++) {
+				ref.graph[i][j] = graph[i][j];
+			}
+		
+		}
+		
+		return (Graph) ref;
 	}
 	
 	  private Float graph[][];
@@ -35,4 +44,6 @@ public class Graph implements Cloneable{
 		
 		}
 	}
+	
+	
 }

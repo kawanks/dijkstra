@@ -6,6 +6,9 @@ public class DijkstraAlgorithm {
 	public DijkstraAlgorithm(Graph g) throws CloneNotSupportedException {
 		
 		gf = g.clone();	
+		
+		System.out.println();
+		
 	}
 	
 	public void mudar() {

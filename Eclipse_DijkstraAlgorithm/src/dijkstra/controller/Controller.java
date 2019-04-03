@@ -10,15 +10,19 @@ public class Controller {
 		try {
 			dj = new DijkstraAlgorithm(gf);
 			
+			
+			System.out.println("original:");
+			
 			gf.showNodes();
 			
 			System.out.println("\n\n\n");
 			
 			dj.mudar();
 			
+			System.out.println("mudança de ref:");
 			gf.showNodes();
 			
-			System.out.println("\n\n\n");
+			System.out.println("\n\n\nmodificado:");
 			dj.gf.showNodes();
 		} catch (CloneNotSupportedException e) {
 			// TODO Auto-generated catch block
