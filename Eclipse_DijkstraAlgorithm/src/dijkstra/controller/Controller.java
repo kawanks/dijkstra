@@ -14,7 +14,7 @@ public class Controller {
 			
 			System.out.println("\n\n\n");
 			
-			dj.mudar();
+			dj.mudar();//Depois de usar esse método grafo gf não devia mudar os valores
 			
 			gf.showNodes();
 			
