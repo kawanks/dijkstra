@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -17,6 +18,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Mínimus");
 			primaryStage.show();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
