@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="613.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controle">
+<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="613.0" prefWidth="944.0" stylesheets="@../style/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controle">
    <children>
-      <Pane fx:id="pane" layoutX="212.0" layoutY="41.0" onMouseClicked="#vert" prefHeight="572.0" prefWidth="732.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+      <Pane fx:id="pane" layoutX="245.0" layoutY="41.0" onMouseClicked="#vert" prefHeight="572.0" prefWidth="699.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
          <children>
             <Group fx:id="group" />
          </children>
       </Pane>
-      <AnchorPane minWidth="212.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="613.0" prefWidth="212.0" style="-fx-background-color: #435d6d;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <ButtonBar buttonOrder="" layoutX="306.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="643.0" style="-fx-background-color: #466577;" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="34.0" minWidth="212.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="613.0" prefWidth="246.0" style="-fx-background-color: #2d3f4a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="45.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#setDijkstra" text="Algoritmo de Dijkstra" />
+            <Accordion layoutX="164.0" layoutY="131.0" nodeOrientation="LEFT_TO_RIGHT" stylesheets="@../style/menu-left-style.css" visible="false" AnchorPane.leftAnchor="13.0">
+              <panes>
+                <TitledPane animated="false" text="Algoritmo de Dijkstra">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="4.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O algoritmo de Dijkstra trabalha varrendo o todo o grafo a partir de um vértice raiz. Ele analisa a distância para cada vértice adjacente e verifica se distância encontrada é a menor, fechando-o então e repetindo o processo enquanto houver vértices abertos" textAlignment="JUSTIFY" wrappingWidth="208.7294921875" />
+                              <Button layoutX="6.0" layoutY="147.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="204.0" text="Aplicar Algoritmo" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Algoritmo de Bellman-Ford">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Algotimo de Floyd-Warshall">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </panes>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Accordion>
+         </children></AnchorPane>
+      <ButtonBar buttonOrder="" layoutX="306.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="643.0" styleClass="menu-bar" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0">
         <buttons>
-          <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" style="-fx-background-color: #466577;" text="Aresta" textFill="WHITE" />
-            <Button contentDisplay="RIGHT" mnemonicParsing="false" style="-fx-background-color: #466577;" text="Vértice" textFill="WHITE" />
+            <Button fx:id="btnAre" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#btnAre" prefHeight="38.0" text="Aresta" textFill="WHITE" />
+            <Button fx:id="btnVert" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#btnVert" prefHeight="38.0" text="Vértice" textFill="WHITE" />
         </buttons>
       </ButtonBar>
    </children>

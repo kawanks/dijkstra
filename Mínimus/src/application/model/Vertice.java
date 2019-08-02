@@ -1,5 +1,6 @@
 package application.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javafx.scene.paint.Color;
@@ -8,19 +9,36 @@ import javafx.scene.shape.Circle;
 public class Vertice extends Circle{
 	
 	private Float shortDist;
-	private List<Vertice> nexts;
+	private List<Aresta> next;
+	private Aresta back;
 	private Boolean isRoot;
-	private Color color;
 
 	public Vertice(double d, double e, double i) {
 		super(d, e, i);
-		this.shortDist = Float.POSITIVE_INFINITY;
-		this.isRoot = Boolean.FALSE;
-		this.color = Color.GREEN;
+		shortDist = Float.POSITIVE_INFINITY;
+		isRoot = Boolean.FALSE;
 		
-		this.setFill(this.color);
+		this.setFill(Color.GREEN);
 		this.setStroke(Color.BLACK);
+		
+		next = new ArrayList<Aresta>();
 	}
+	
+	public void setBack(Aresta a) {
+		a.getLine().setStroke(Color.RED);
+		
+		if(back != null) {
+			back.getLine().setStroke(Color.BLACK);
+			back = a;
+		}else {
+			back = a;
+		}
+	}
+	
+	public List<Aresta> getNext() {
+		return next;
+	}
+
 
 	public Float getShortDist() {
 		return shortDist;
@@ -32,11 +50,11 @@ public class Vertice extends Circle{
 	}
 	
 	public void setIsRoot(Boolean isRoot) {
+		if(isRoot) {
+			this.setFill(Color.RED);
+		}else {
+			this.setFill(Color.GREEN);
+		}
 		this.isRoot = isRoot;
-	}
-	
-	public void setColor(Color color) {
-		this.color = color;
-		this.setFill(this.color);
 	}
 }

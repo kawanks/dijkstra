@@ -19,7 +19,7 @@ public class Main extends Application {
 		try {
 			AnchorPane root = FXMLLoader.load(getClass().getResource("../view/TelaInicial.fxml"));
 			Scene scene = new Scene(root);
-			//scene.getStylesheets().add(getClass().getResource("style/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("../style/application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Mínimus");
 			//primaryStage.setMaximized(true);
