@@ -50,6 +50,12 @@ public class Controle {
 	}
 	
 	@FXML
+	private void clean() {
+		grafo = new Graph();
+		group.getChildren().clear();
+	}
+	
+	@FXML
 	private void setDijkstra(MouseEvent e) {
 		Dijkstra dj = new Dijkstra(grafo);
 		dj.execute();

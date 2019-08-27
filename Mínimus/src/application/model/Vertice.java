@@ -30,6 +30,7 @@ public class Vertice extends Circle{
 		if(back != null) {
 			back.getLine().setStroke(Color.BLACK);
 			back = a;
+			
 		}else {
 			back = a;
 		}

@@ -23,6 +23,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Mínimus");
 			//primaryStage.setMaximized(true);
+			
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

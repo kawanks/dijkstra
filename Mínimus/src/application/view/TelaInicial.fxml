@@ -12,9 +12,9 @@
 
 <AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="613.0" prefWidth="944.0" stylesheets="@../style/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controle">
    <children>
-      <Pane fx:id="pane" layoutX="245.0" layoutY="41.0" onMouseClicked="#vert" prefHeight="572.0" prefWidth="699.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+      <Pane id="pane" fx:id="pane" layoutX="245.0" layoutY="41.0" onMouseClicked="#vert" prefHeight="572.0" prefWidth="699.0" stylesheets="@../style/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
          <children>
-            <Group fx:id="group" />
+            <Group fx:id="group" styleClass=".g" />
          </children>
       </Pane>
       <AnchorPane layoutX="34.0" minWidth="212.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="613.0" prefWidth="246.0" style="-fx-background-color: #2d3f4a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -47,6 +47,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Accordion>
+            <Button layoutX="71.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#clean" text="Limpar Grafo" />
          </children></AnchorPane>
       <ButtonBar buttonOrder="" layoutX="306.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="643.0" styleClass="menu-bar" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0">
         <buttons>

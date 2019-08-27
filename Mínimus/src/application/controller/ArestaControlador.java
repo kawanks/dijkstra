@@ -52,6 +52,7 @@ public class ArestaControlador implements EventHandler<MouseEvent>{
 			 this.begin = true;
 			 this.grafo.addAresta(this.aresta);
 			 g.getChildren().add(this.aresta);
+			 this.aresta.toBack();
 			 //System.out.println(this.grafo.getArestas().size() + "  " + this.grafo.getVertices().size());
 			
 		 }
